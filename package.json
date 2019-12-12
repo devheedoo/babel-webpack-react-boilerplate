@@ -1,8 +1,8 @@
 {
-  "name": "react-bingo-smonwar",
+  "name": "babel-webpack-react-boilerplate",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/devheedoo/react-bingo-smonwar.git",
+  "repository": "https://github.com/devheedoo/babel-webpack-react-boilerplate.git",
   "author": "Heedo Kim <devheedoo@gmail.com>",
   "license": "MIT",
   "scripts": {

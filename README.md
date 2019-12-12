@@ -1,4 +1,4 @@
-# react-bingo-smonwar
+# babel-webpack-react-boilerplate
 
 ## Config
 
