@@ -1,19 +1,22 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const port = process.env.PORT || 8080;
+const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: ['@babel/polyfill', './src/index.js'],
   output: {
-    path: `${__dirname}/dist`,
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[hash].js'
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
+        include: [
+          path.resolve(__dirname, 'src'),
+        ],
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: 'babel-loader',
       },
     ]
   },
@@ -26,7 +29,7 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     host: 'localhost',
-    port,
+    port: 8080,
     open: true,
     historyApiFallback: true,
     hot: true,
